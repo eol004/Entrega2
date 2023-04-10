@@ -1,0 +1,136 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d5c6dc">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#d5c6dc">
+
+        <TextView
+            android:id="@+id/titulo_reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:text="¡Registrate!"
+            android:textColor="#333333"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/btn_registrarse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="100dp"
+            android:text="Registrarse"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contra_reg" />
+
+        <Button
+            android:id="@+id/btn_inicioses_reg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="100dp"
+            android:text="Iniciar sesión"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_registrarse"
+            app:layout_constraintVertical_bias="0.009" />
+
+        <EditText
+            android:id="@+id/usuario_reg"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="80dp"
+            android:background="#FFFFFF"
+            android:hint="Nombre de usuario"
+            android:inputType="text"
+            android:padding="12dp"
+            android:rotationY="0"
+            android:textColor="#333333"
+            android:textColorHint="#171616"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/contra_reg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nom_reg"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <EditText
+            android:id="@+id/contra_reg"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="80dp"
+            android:background="#FFFFFF"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="#333333"
+            android:textColorHint="#171616"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/usuario_reg" />
+
+        <EditText
+            android:id="@+id/nom_reg"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="80dp"
+            android:background="#FFFFFF"
+            android:hint="Nombre completo"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:textColor="#333333"
+            android:textColorHint="#171616"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/usuario_reg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_reg"
+            app:layout_constraintVertical_bias="0.53" />
+
+        <TextView
+            android:id="@+id/logo_regis"
+            android:layout_width="230dp"
+            android:layout_height="193dp"
+            android:background="@drawable/fondo"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_inicioses_reg"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
