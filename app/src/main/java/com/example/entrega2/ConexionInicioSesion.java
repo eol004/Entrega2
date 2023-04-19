@@ -11,14 +11,14 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class ConexionServidorDAS extends Worker {
-    public ConexionServidorDAS(@NonNull Context context, @NonNull WorkerParameters workerParams) {
+public class ConexionInicioSesion extends Worker {
+    public ConexionInicioSesion(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
     }
 
     @NonNull
     @Override
-    public Result doWork() {
+    public Result doWork() { //Conectada con InicioSesion
         //Conexion con el servidor
         String direccion = "http://ec2-54-93-62-124.eu-central-1.compute.amazonaws.com/eonate006/WEB/main.php";
         HttpURLConnection urlConnection = null;

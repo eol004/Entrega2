@@ -1,18 +1,9 @@
 package com.example.entrega2;
 import android.content.Context;
-import android.util.Log;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.lifecycle.Observer;
-import androidx.work.OneTimeWorkRequest;
-import androidx.work.WorkInfo;
-import androidx.work.WorkManager;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -25,15 +16,15 @@ import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
 
-public class conexionBDWebService extends Worker {
+public class ConexionBDWebService extends Worker {
 
-    public conexionBDWebService(@NonNull Context context, @NonNull WorkerParameters workerParams) {
+    public ConexionBDWebService(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
     }
 
     @NonNull
     @Override
-    public Result doWork() {
+    public Result doWork() { //Conectada con Registro
         //Registro de usuarios
         String nombre = getInputData().getString("nombre");
         String usuario = getInputData().getString("usuario");
