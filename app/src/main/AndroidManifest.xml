@@ -21,6 +21,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".InicioSesion"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".Registro">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Registro" />
+        </activity>
     </application>
 
 </manifest>
