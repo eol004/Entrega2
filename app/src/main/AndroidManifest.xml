@@ -29,6 +29,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Registro" />
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".InicioSesion">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InicioSesion" />
+        </activity>
     </application>
 
 </manifest>
