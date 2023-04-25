@@ -45,7 +45,8 @@ public class InicioSesion extends AppCompatActivity {
                     if(workInfo.getOutputData().getBoolean("existe", true)){
                         // Login correcto
                         Toast.makeText(InicioSesion.this, "Inicio de sesión correcto", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(InicioSesion.this, MainActivity.class);
+                        Intent intent = new Intent(InicioSesion.this, ImagenApp.class);
+                        intent.putExtra("usuario", usu);
                         startActivity(intent);
                         finish();
                     }

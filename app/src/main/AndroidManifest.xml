@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-feature android:name="android.hardware.camera2.full" android:required="true"/>
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -30,12 +35,20 @@
                 android:value=".Registro" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".ImagenApp"
             android:configChanges="orientation|screenSize"
             android:parentActivityName=".InicioSesion">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".InicioSesion" />
+        </activity>
+        <activity
+            android:name=".AnadirDesc"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".ImagenApp">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ImagenApp" />
         </activity>
     </application>
 
