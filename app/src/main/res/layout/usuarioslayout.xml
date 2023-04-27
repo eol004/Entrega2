@@ -1,29 +1,58 @@
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
-    android:padding="16dp"
-    android:elevation="4dp">
+    android:elevation="400dp"
+    android:padding="16dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:elevation="4dp">
+        android:layout_height="673dp"
+        android:elevation="800dp">
 
         <ImageView
-            android:id="@+id/trago"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/bo1" />
+            android:id="@+id/usuarioFoto"
+            android:layout_width="224dp"
+            android:layout_height="194dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="83dp"
+            android:layout_marginBottom="327dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/texto"
+            android:id="@+id/usuario"
+            android:layout_width="137dp"
+            android:layout_height="61dp"
+            android:layout_above="@+id/usuarioFoto"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="122dp"
+            android:layout_marginBottom="30dp"
+            android:text="TextView"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/descUsuarios"
+            android:layout_width="246dp"
+            android:layout_height="148dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="72dp"
+            android:layout_marginBottom="126dp"
+            android:text="TextView" />
+
+        <Button
+            android:id="@+id/btnHablar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center" />
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="141dp"
+            android:layout_marginBottom="40dp"
+            android:text="¡Hablar!" />
+
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

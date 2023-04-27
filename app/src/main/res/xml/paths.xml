@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-files-path
+        name="externo"
+        path="/"/>
+    <files-path
+        name="privado"
+        path="/"/>
+    <external-path
+        name="pictures"
+        path="Pictures"/>
+</paths>

@@ -9,16 +9,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class ElViewHolder extends RecyclerView.ViewHolder {
     public TextView texto;
-    public ImageView trago;
+    public ImageView usuarioFoto;
     private AdapterView.OnItemClickListener listener;
     public boolean[] seleccion;
-    public int numTragos;
+    public TextView desc;
+    public boolean[] botonhablar;
+
 
     public ElViewHolder(View itemView) {
         super(itemView);
         this.listener = listener;
-        texto = itemView.findViewById(R.id.texto);
-        trago = itemView.findViewById(R.id.trago);
+        texto = itemView.findViewById(R.id.usuario);
+        usuarioFoto = itemView.findViewById(R.id.usuarioFoto);
+        desc = itemView.findViewById(R.id.descUsuarios);
 
     }
 }
