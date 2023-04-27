@@ -24,8 +24,11 @@ import androidx.core.content.FileProvider;
 import android.Manifest;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -83,6 +86,7 @@ public class ImagenApp extends AppCompatActivity {
                 finish();
             }
         });
+        registrarDispositivo();
     }
 
     //Comprobamos que los permisos de la camara están activos
@@ -184,5 +188,23 @@ public class ImagenApp extends AppCompatActivity {
             outState.putString("uriimagen", uriimagen.toString());
         }
     }
+
+    //Generar token para utlizar con FCM
+    //https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceIdService
+    //https://www.youtube.com/watch?v=fiUkA2OZQjs&ab_channel=unsimpleDev
+    public void registrarDispositivo(){
+        FirebaseMessaging.getInstance().getToken().addOnCompleteListener(new OnCompleteListener<String>() {
+            @Override
+            public void onComplete(@NonNull Task<String> task) {
+                if (!task.isSuccessful()) {
+                    Log.d("tag", "Error al conseguir el token");
+                    return;
+                }
+                String token = task.getResult();
+                Log.d("tag", "token: " +token);
+            }
+        });
+    }
+
 
 }
